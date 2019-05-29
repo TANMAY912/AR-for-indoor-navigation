@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="author" content="avanish269">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="..\js\instascan.min.js"></script>
+    <script type="text/javascript" src="..\js\vue.min.js"></script>
+    <script type="text/javascript" src="..\js\adapter.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\css\qrscanner.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="listeditems">
+        <section class="listofcameras">
+          <h2>Select Camera Here</h2>
+          <ul>
+            <li v-if="cameras.length===0" class="empty">No cameras found on the device</li>
+            <li v-for="cam in cameras">
+              <span v-if="cam.id==activeCameraId" :title="formatName(cam.name)" class="active">{{ formatName(cam.name) }}</span>
+              <span v-if="cam.id!=activeCameraId" :title="formatName(cam.name)">
+                <a @click.stop="selectCamera(cam)">{{ formatName(cam.name) }}</a>
+              </span>
+            </li>
+          </ul>
+        </section>
+        <button type="button" class="btn btn-default btn-sm" onclick="location.href='https://www.google.com'"><span class="glyphicon glyphicon-step-backward"></span>Change Destination</button>
+      </div>
+      <div class="precon">
+        <video id="pre" autoplay="autoplay" class="active"></video>
+      </div>
+      <script type="text/javascript" src="..\js\qrscanner.js"></script>
+  </body>
+</html>
