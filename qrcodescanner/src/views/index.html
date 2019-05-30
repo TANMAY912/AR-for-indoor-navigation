@@ -2,23 +2,22 @@
 <html>
   <head>
     <meta name="author" content="avanish269">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.5">
     <title>Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script type="text/javascript" src="..\js\instascan.min.js"></script>
-    <script type="text/javascript" src="..\js\vue.min.js"></script>
-    <script type="text/javascript" src="..\js\adapter.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="..\css\qrscanner.css">
+    <script type="text/javascript" src="src\js\instascan.min.js"></script>
+    <script type="text/javascript" src="src\js\vue.min.js"></script>
+    <script type="text/javascript" src="src\js\adapter.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src\css\qrscanner.css">
   </head>
   <body>
     <div id="app">
       <div class="precon">
         <video id="pre" autoplay="autoplay" class="active"></video>
-        <br>
-        <br>
-        <br>
-        <button type="button" class="btn btn-default btn-sm" onclick="location.href='https://www.google.com'"><span class="glyphicon glyphicon-step-backward"></span>Change Destination</button>
       </div>
-      <script type="text/javascript" src="..\js\qrscanner.js"></script>
+      <div class="sidebar">
+          <button type="button" class="btn btn-default btn-sm" onclick="location.href='https://www.google.com'"><span class="glyphicon glyphicon-step-backward"></span></button>
+      </div>
+      <script type="text/javascript" src="src\js\qrscanner.js"></script>
   </body>
 </html>
